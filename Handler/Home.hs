@@ -3,6 +3,12 @@ module Handler.Home where
 
 import Import
 
+getUserCreateR :: Handler RepHtml
+getUserCreateR = do
+    defaultLayout $ do
+        setTitle "UserCreate"
+        $(widgetFile "userform")
+
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
