@@ -5,9 +5,22 @@ import Import
 
 getUserCreateR :: Handler RepHtml
 getUserCreateR = do
+    (formWidget, formEnctype) <- generateFormPost userForm
     defaultLayout $ do
         setTitle "UserCreate"
         $(widgetFile "userform")
+
+postUserCreateR :: Handler RepHtml
+postUserCreateR = do
+    ((result, formWidget), formEnctype) <- runFormPost userForm
+    defaultLayout $ do
+        setTitle "UserCreate"
+        $(widgetFile "userform")
+
+userForm :: Form User
+userForm = renderDivs $ User
+    <$> areq textField "IDENT" Nothing
+    <*> aopt textField "PASSWORD" Nothing
 
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in

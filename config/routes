@@ -5,4 +5,4 @@
 /robots.txt RobotsR GET
 
 / HomeR GET POST
-/user/create UserCreateR GET
+/user/create UserCreateR GET POST
