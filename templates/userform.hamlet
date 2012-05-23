@@ -1,0 +1,4 @@
+<h1>UserFormPage
+<form method=post enctype=#{formEnctype}>
+    ^{formWidget}
+    <input type="submit">
