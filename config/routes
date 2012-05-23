@@ -6,3 +6,4 @@
 
 / HomeR GET POST
 /user/create UserCreateR GET POST
+/tag/create TagCreateR GET POST
