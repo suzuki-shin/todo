@@ -13,6 +13,12 @@ getTagCreateR = do
 postTagCreateR :: Handler RepHtml
 postTagCreateR = do
     ((result, formWidget), formEnctype) <- runFormPost tagForm
+    case result of
+      FormSuccess res -> do
+        _ <- runDB $ insert res
+        return ()
+      _ -> do
+        return ()
     defaultLayout $ do
         setTitle "TagCreate"
         $(widgetFile "tagform")
