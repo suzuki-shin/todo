@@ -8,4 +8,4 @@
 /user/create UserCreateR GET POST
 /tag        TagCreateR GET POST
 /tag/#TagId TagUpdateR GET POST
-/tags       TagsR      GET
+/tags/#Int  TagsR      GET
