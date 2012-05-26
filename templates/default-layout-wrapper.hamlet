@@ -22,6 +22,17 @@
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
     <body>
+        <header>
+            <h1>Todo Management System
+            <ul>
+                <li>
+                    <a href=@{TodosR}>Todoリスト
+                <li>
+                    <a href=@{TodoCreateR}>Todo新規作成
+                <li>
+                    <a href=@{TagsR 1}>Tagリスト
+                <li>
+                    <a href=@{TagCreateR}>Tag新規作成
         <div class="container">
             <header>
             <div id="main" role="main">
