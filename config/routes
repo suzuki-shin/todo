@@ -10,3 +10,4 @@
 /tag/#TagId TagUpdateR GET POST
 /tags/#Int  TagsR      GET
 /todo       TodoCreateR GET POST
+/todo/#TodoId TodoUpdateR GET POST
